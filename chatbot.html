@@ -1,0 +1,182 @@
+ <html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> University Website Design - Easy Tutorials</title>
+        <link rel="stylesheet" href="stylez.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!---header-->
+        
+        <section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+                <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                       <ul>
+                            <li><a href="index.html" target="_parent">HOME</a></li>
+                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="course.html">COURSE</a></li>
+                            <li><a href="programs.html">PROGRAMS</a></li>
+                            <li><a href="contact.html">CONTACT</a></li>
+                             <li><a href="chatbot.html">SUPPORT</a></li>
+                        </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Support</h1>
+        </section>    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Chatbot</title>
+    <style>
+      
+        #chat-container {
+            width: 330px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        #chat-header {
+            background: #007bff;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+        #chat-output {
+            height: 300px;
+            padding: 10px;
+            overflow-y: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        #chat-input {
+            display: flex;
+            padding: 10px;
+        }
+        #user-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #send-btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            margin-left: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #send-btn:hover {
+            background: #0056b3;
+        }
+        .message {
+            margin-bottom: 10px;
+        }
+        .user-message {
+            text-align: right;
+            color: #007bff;
+        }
+        .bot-message {
+            text-align: left;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-header">School Chatbot</div>
+        <div id="chat-output"></div>
+        <div id="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatOutput = document.getElementById('chat-output');
+        const userInput = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+
+        // Function to add a message to the chat output
+        function addMessage(message, sender) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message', sender + '-message');
+            messageElement.textContent = message;
+            chatOutput.appendChild(messageElement);
+            chatOutput.scrollTop = chatOutput.scrollHeight; // Auto-scroll
+        }
+
+        // Function to send user input to the backend
+        async function sendMessage() {
+            const userMessage = userInput.value.trim();
+            if (!userMessage) return;
+
+            addMessage(userMessage, 'user'); // Display user message
+            userInput.value = ''; // Clear input field
+
+            try {
+                const response = await fetch('http://127.0.0.1:5000/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: userMessage })
+                });
+                const data = await response.json();
+                addMessage(data.response, 'bot'); // Display bot response
+            } catch (error) {
+                addMessage('Sorry, something went wrong.', 'bot');
+            }
+        }
+
+        // Event listeners
+        sendBtn.addEventListener('click', sendMessage);
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+    </script>
+</body>
+</html>
+     
+
+                
+<!------------ Footer-------------->
+
+                <section class="footer"><h4>About Us</h4>
+<p>ARKAD ONLINE SCHOOL Mun dukufa ne domin samar da ilimin fasahohin zamani ne tabbatar da samawa matasa ilimin domin samar da ayyukan dogaro da kai da kuma kara daga darajar Harshen Hausa a fadin Duniya 🌍.</p>  <div class="icons">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-linkedin"></i>
+                            </div>
+                                <p>Made With   <i class="fa fa-heart-o"></i> By Easy Tutorials </p>
+                </section>
+
+
+
+
+ <!--javaScripting for Toggle Menu-->
+                <script>
+
+
+                    var navLinks = document.getElementById("navLinks");
+
+                    function showMenu(){
+                        navLinks.style.right = "0"
+                    }
+
+                    function hideMenu(){
+                        navLinks.style.right = "-200px"
+                    }
+                </script>
+
+    </body>
+</html>
+

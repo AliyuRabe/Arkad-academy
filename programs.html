@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title> University Website Design - Easy Tutorials</title>
+        <link rel="stylesheet" href="stylez.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+<!-------------- Header----------------->
+        
+<section class="sub-header">
+            <nav>
+                <a href="index.html"><img src="images/logo.png"></a>
+                    <div class="nav-links" id="navLinks">
+                        <i class="fa fa-times" onclick="hideMenu()"></i>
+                            <ul>
+                                <li><a href="index.html" target="_parent">HOME</a></li>
+                                <li><a href="about.html">ABOUT</a></li>
+                                <li><a href="course.html">COURSE</a></li>
+                                <li><a href="program.html">PROGRAMS</a></li>
+                                <li><a href="contact.html">CONTACT</a></li>
+                                 <li><a href="chatbot.html">SUPPORT</a></li>
+                            </ul>
+                    </div>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+            </nav>
+            <h1>Our Programs</h1>
+ </section>   
+
+<!-------------- Blog Page Content----------------->
+ <section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+            <img src="images/program_image.jpeg">
+            <h2> our Certificate & Online Programs </h2>
+            <p>Muna bada certificate akan kowani course kafin karbar certificate dolene dalibi ya rubuta final Exam kafin rubuta exam sai dalibi ya sami 70% attendence mark tare answer assignment da quizs, sannan bamu ba dalibin da yake da fail results certificate.</p>
+            <br> <p>Muna koyarwa ne live sessions akan kowani course sannan muna lessons ukku a kowani sati , kowani dalibi yana bukatar reading materials kamar su Computer ko smartphone, biro, books , internet connection wasu courses din da bukatar drawing materials.</p> 
+            <br><p>Muna da kwararrun Malamai masu hazaka sannan masu iya mula'amala da fasahohin zamani domin koyar ta online.</p>
+
+            <div class="comment-box">
+                <h3> Leave a Comment</h3>
+
+                <form class="comment-form">
+                    <input type="text" placeholder="Enter Name">
+                    <input type="email" placeholder="Enter Email">
+                    <textarea rows="5" placeholder="Your Coment"></textarea>
+                    <button type="submit" class="hero-btn red-btn">Post Comment</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="blog-right">
+            <h3> Lists of the Courses</h3>
+            
+            <div>
+                <span> English</span>
+                <span>2</span>
+            </div>
+
+            <div>
+                <span> Arabic</span>
+                <span>3</span>
+            </div>
+
+            <div>
+                <span> Qur'an</span>
+                <span>1</span>
+            </div>
+
+            <div>
+                <span> Hadisi</span>
+                <span>2</span>
+            </div>
+
+            <div>
+                <span> Web Development</span>
+                <span>3</span>
+            </div>
+
+            <div>
+                <span> Artificial Intelligence</span>
+                <span>2</span>
+            </div>
+
+            <div>
+                <span> Android Apps Development</span>
+                <span>3</span>
+            </div>
+            
+            <div>
+                <span> Graphics Design</span>
+                <span>3</span>
+            </div>
+            
+            <div>
+                <span> C Programming</span>
+                <span>3</span>
+            </div>
+            
+            <div>
+                <span> C++ Programming</span>
+                <span>3</span>
+            </div>
+            
+            <div>
+                <span> Python Programming</span>
+                <span>3</span>
+            </div>
+    </div>
+ </section>
+
+
+<!-------------- Footer----------------->
+
+<section class="footer">
+        <h4>About Us</h4>
+            <p>ARKAD ACADEMY Mun dukufa ne domin samar da ilimin fasahohin zamani ne tabbatar da samawa matasa ilimin domin samar da ayyukan dogaro da kai da kuma kara daga darajar Harshen Hausa a fadin Duniya 🌍.</p>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-linkedin"></i>
+                </div>
+        <p>Made With   <i class="fa fa-heart-o"></i> By Easy Tutorials </p>
+</section>
+
+
+
+
+
+
+
+
+                <!--javaScripting for Toggle Menu-->
+                <script>
+
+
+                    var navLinks = document.getElementById("navLinks");
+
+                    function showMenu(){
+                        navLinks.style.right = "0"
+                    }
+
+                    function hideMenu(){
+                        navLinks.style.right = "-200px"
+                    }
+                </script>
+
+    </body>
+</html>
+
